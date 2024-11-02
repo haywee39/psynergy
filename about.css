@@ -1,0 +1,556 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  
+  
+}
+
+#home{
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/solar-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+/* START:STYLING  FOR THE NAVBAR STARTS FROM HERE */
+
+.navbar{
+  color: white;
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
+  
+}
+
+/* START JOLLY PIC AT TOP LEFT */
+.navbar-toggler-icon {
+  background-color: #d58936; 
+}
+
+.navbar-brand img{
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+}
+/* END JOLLY PIC AT TOP LEFT */
+
+
+.nav-item a{
+  color:white !important;
+  text-decoration: none;
+  margin-left: 30px;
+  
+}
+
+.nav-item a:hover{
+  color:orange !important;
+}
+
+.dropdown-menu{
+  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
+}
+
+/* END: STYLING FOR THE NAVBAR ENDS HERE */
+
+
+
+/* START- ABOUT SECTION BEGINS HERE */
+#about{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 190vh;
+    width: 100vw;
+    /* background-color: #69140e; */
+  }
+  
+  .our-company{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f8de7e; */
+
+  }
+  
+  .our-company h1{
+    font-family: fantasy;
+    font-size: 35px;
+    color: #69140e;
+    }
+  .line{
+    margin-top: 5px;
+    width: 100px;
+    height: 4px;
+    background-color: #69140e;
+  }
+  
+  
+  /*start- core-vision-mission div */
+  .core-vision-mission{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    opacity: 0; /* Start invisible */
+  animation: fadeIn 1s ease-in forwards; /* Apply the fade-in animation */
+  /* background-color: blue; */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Start small */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Grow to full size */
+  }
+}
+  
+  /*end- core-vision-mission div */
+  
+  .believe{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width:30% ;
+    background-color: #f8de7e;
+    text-align:center;
+    justify-content: center;
+    /* outline: 2px solid  #69140e; */
+  }
+  
+  .believe h1{
+    font-size: 25px;
+  }
+  
+  .believe p{
+    font-size: 18px;
+  }
+  
+  
+  
+  /*start- ppas description styling */
+  .about-ppas-container{
+    margin-top: 40px;
+    position: relative;
+      width: 80vw;
+      height: 140vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      /* background-color: blue; */
+  }
+  
+  .about-ppas-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(/pageswitback/pexels-thisisengineering-19895880.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-attachment: fixed;
+      opacity: 0.3;
+  }
+  
+  
+  .texts{
+    height: 100%;
+    width: 85%;
+    /* background-color: black; */
+  }
+  
+  
+  .texts img{
+    width: 280px;
+    height: 280px;
+    border-radius: 150px;
+    margin-left:1rem;
+    shape-outside:circle();
+    float: left;
+    margin-right:3rem;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 2s ease-in forwards; /* Apply the fade-in animation */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Start small */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Grow to full size */
+  }
+}
+  
+  .texts h1{
+    font-family: fantasy;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #69140e;
+    text-align: center;  
+  }
+  
+  .texts p{
+    font-size: 20px;
+    color: #69140e;
+  }
+  
+  
+  
+  /* <!--START THE TEAM PROFILE BEGIN HERE--> */
+  #team{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction:column;
+    width:100vw;
+    height: 200vh; 
+    align-items: center;
+    /* background: lightcoral; */
+  }
+  .our-team{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 40vh;
+    align-items: center;
+    /* background-color: #f8de7e; */
+  }
+  
+  #team h1{
+  font-family: fantasy;
+  font-size: 35px;
+  color: #69140e;
+  }
+
+  .our-team p{
+    margin-top: 2vh;
+    text-align: center;
+    width: 50vw;
+    height: 25vh;
+    font-size: 20px;
+    color: #69140e;
+    /* background-color: red; */
+  }
+  
+  
+  .team-profile {
+    margin: 20px; /* Add space around each profile card */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 410px;
+    background:#69140e;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  
+  .team-profile.visible {
+    animation: slideIn 1s ease forwards;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 83vw;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .team-profile img {
+    width: 100%;
+    height: 75%;
+  }
+  
+  .team-details {
+    width: 100%;
+    height: 95px;
+    color: white;
+    background-color: rgb(213, 0, 0);
+  }
+  
+  .team-details h1 {
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 28px;
+    text-align: center;
+    color: white !important;
+  }
+  
+  .team-profile p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* <!--END THE TEAMS PROFILE END HERE   --> */
+
+  #client{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction:column;
+    width:100vw;
+    height: 130vh; 
+    align-items: center;
+    /* background: lightcoral; */
+  }
+  .our-client{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+    /* background-color: #f8de7e; */
+  }  
+  #client h1{
+  font-family: fantasy;
+  font-size: 35px;
+  color: #69140e;
+  }
+
+  .our-client p{
+    margin-top: 2vh;
+    text-align: center;
+    width: 65vw;
+    height: 35vh;
+    font-size: 20px;
+    color: #69140e;
+    /* background-color: red; */
+  }
+
+
+  main{
+    width: min(1200px, 50vw);
+    /* margin: 10vh; */
+    /* background-color: yellow; */
+}
+.slider{
+  color: red;
+    width: 50vw;
+    height: 30vh;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100vw;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 6s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (6s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+
+/* *********************************************************************** */
+#reach-out{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#reach-out::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(/pages/ladywriting-removebg-preview.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.3;
+}
+
+.men-at-work {
+  overflow: hidden;
+  width: 35vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #d58936;
+}
+
+.slide-in-image {
+  width: 30vw; /* Adjust to the desired image size */
+  height: 85vh;
+  opacity: 0;
+  transform: translateX(100%); /* Start position: off the screen to the right */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-in-image.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.xyz{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 35vw;
+  height: 80vh;
+  gap: 15px;
+  background-color: #f3ba7e;
+  padding-left: 20px;
+ 
+}
+
+.xyz h1{
+  font-family: fantasy;
+  font-size: 28px;
+  color: #69140e;
+}
+
+.xyz a{
+  text-decoration: none;
+  color: #69140e;
+  font-size: 20px;
+}
+
+.btn-quote{
+  display: flex;
+  width: 150px;
+  height: 60px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  outline: #69140e solid 2px;
+}
+
+.btn-quote:hover{
+  background-color: red;
+}
+
+/* ************************************************************ */
+
+
+/* *************************************************** */
+footer{
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  color: white;  
+  justify-content: right;
+  align-items: center;
+  font-size: 16px;
+  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
+}
+
+.foot{
+  display: flex;
+  width: 18vw;
+  height: 10vh;
+  color: white;  
+  justify-content: center;
+  place-items: center;
+  font-size: 16px; 
+}
+
+.foot a{
+  color: white;
+  text-decoration: none;  
+}
+.foot a:hover{
+  color: red;
+}
+
+.tag{
+ text-shadow:2px 2px 2px grey;
+ animation:bayo 2s ease 1s infinite;
+}
+
+@keyframes bayo{
+
+ 0%{
+    transform:rotateX(-45deg);
+}
+ 50%{
+    transform:rotateY(45deg);
+}
+} 
+  
+  
+  /* END- ABOUT SECTION ENDS HERE */
