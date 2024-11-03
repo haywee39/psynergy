@@ -32,39 +32,38 @@ body{
 /* START:STYLING  FOR THE NAVBAR STARTS FROM HERE */
 
 .navbar{
-  color: white;
-  height: 10vh;
-  width: 100%;
-  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
-  
-}
-
-/* START JOLLY PIC AT TOP LEFT */
-.navbar-toggler-icon {
-  background-color: #d58936; 
+  position: fixed;
+  height: 14vh;
+  width: 100vw;
+  padding-right: 70px;
+   background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
 }
 
 .navbar-brand img{
-  width: 60px;
-  height:60px;
-  border-radius: 50%;
-}
-/* END JOLLY PIC AT TOP LEFT */
-
-
-.nav-item a{
-  color:white !important;
-  text-decoration: none;
-  margin-left: 30px;
-  
+  width: 75px;
+  height: 75px;
+  border-radius: 60px;
+  margin-left: 20px;
 }
 
-.nav-item a:hover{
-  color:orange !important;
+/* Align menu items to the right */
+ .navbar-nav {
+  margin-left: auto;
 }
 
-.dropdown-menu{
-  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
+/* Change the font color to white */
+.navbar .navbar-nav .nav-link {
+  color: white !important;
+}
+
+/* Add spacing between menu items */
+.navbar-nav .nav-item {
+  margin-left: .5rem;
+  padding-right: 30px;
+}
+
+.navbar-toggler-icon {
+  background-color: white; 
 }
 
 /* END: STYLING FOR THE NAVBAR ENDS HERE */
