@@ -23,34 +23,42 @@
 
     <!-- THE NAVBAR BEGIN FROM HERE  -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="/logo/ppas logo.jpg" alt="company-logo"></a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="./logo/ppas logo.jpg" alt="logo"></a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
           
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Who We Are</a>
-              </li>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="service.html">What We Do</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Where To Find Us</a>
-              </li>
-            </ul>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Who We Are
+            </a>
+              <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#about">Our Company</a></li>
+                <li><a class="dropdown-item" href="#team">Our Work Force</a></li>
+                <li><a class="dropdown-item" href="#client">Our Clientele</a></li>
+              </ul> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">What We Do</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Where To Find Us</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
 <!-- THE NAVBAR ENDS HERE  -->
 
