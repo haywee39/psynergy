@@ -55,7 +55,7 @@ body{
 /* END: STYLING FOR THE NAVBAR ENDS HERE */
 
 #services{
-  padding-top: 12vh;
+  padding-top: 13vh;
   display: flex;
   flex-direction:column;
   width:100vw;

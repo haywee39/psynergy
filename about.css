@@ -72,7 +72,7 @@ body{
 
 /* START- ABOUT SECTION BEGINS HERE */
 #about{
-    margin-top: 2vh;
+    margin-top: 6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
