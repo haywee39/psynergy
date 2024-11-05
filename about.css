@@ -115,8 +115,8 @@ body{
     width: 100vw;
     height: 60vh;
     opacity: 0; /* Start invisible */
-  animation: fadeIn 1s ease-in forwards; /* Apply the fade-in animation */
-  /* background-color: blue; */
+    animation: fadeIn 1s ease-in forwards; /* Apply the fade-in animation */
+    background-color: #69140e;
 }
 @keyframes fadeIn {
   0% {
@@ -135,15 +135,16 @@ body{
     display: flex;
     flex-direction: column;
     height: 40vh;
-    width:30% ;
-    background-color: #f8de7e;
+    width:30vw ;
+    background-color: #d58936;
     text-align:center;
     justify-content: center;
+    color: white;
     /* outline: 2px solid  #69140e; */
   }
   
   .believe h1{
-    font-size: 25px;
+    font-size: 23px;
   }
   
   .believe p{

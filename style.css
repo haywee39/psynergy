@@ -18,9 +18,9 @@ body{
 
 .navbar{
   position: fixed;
-  height: 14vh;
+  height: 13vh;
   width: 100vw;
-  padding-right: 70px;
+  /* padding-right: 70px; */
    background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
 }
 
@@ -55,26 +55,24 @@ body{
 
 
 #home{
-  /* margin-top: 10vh; */
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh; 
   justify-content: center;
   align-items: center;
-  /* background-image: url(/pages/mainlandinng.jpg); */
   background-image: url(./pages/pexels-thisisengineering-19895880.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: black; /* Fallback color */
+  background-color: #d58936; /*Fallback color*/
    
 }
 
 
 /* START- CENTER CAPTION ON LANDING-PAGE AND REQUEST SERVICE BUTTON HERE */
 .content {
-  height: 100vh;
+  height: 85vh;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -84,37 +82,41 @@ body{
   /* background-color: #69140e; */
 }
 
-
-/* start- P-pas Synergy */
+/* *************************** */
+/*start- P-pas Synergy */
 .content h1{
     font-family: fantasy;
-    font-size: 100px;
+    font-size: 90px;
     letter-spacing: 3px;
     text-align: center;
     word-spacing: 40px;
     color: white;
     text-shadow: orange 5px 5px 5px;
-    animation: ppas 5s;
+    animation: ppas 1s;
 }
 @keyframes ppas {
   0% {
-      transform: rotateX(0deg) scale(0);
+      transform: rotateX(180deg) scale(0);
   }
 
 }
-/* end- P-pas Synergy */
 
-
-/* start slogan */
-.content h2{
-  margin-top: 20px;
-  font-size: 25px;
+/* start- company slogan */
+.content h3{
+  font-family: 'Splash', cursive;
+  letter-spacing: 3px;
+  font-size: 35px;
+  color: white;
+  text-shadow: orange 3px 3px 3px;
+  margin-top: 35px;
+  animation: slogan 1.5s;
+}
+@keyframes slogan {
+  0% {
+      transform: rotateX(180deg) scale(0);
+  }
 }
 
-/* end slogan */
-
-
-/* start- explore button */
 .content a{
   display: inline-block;
   text-decoration: none;
@@ -125,45 +127,36 @@ body{
   background: transparent;
   margin-top: 30px;
   outline: 3px solid white;
+  animation: btn 2s;
+}
+@keyframes btn{
+  0%{
+    transform: rotateY(180deg) scale(0)
+  }
+  25%{
+    transform: rotateX(180deg) scale(0)
+  }
 }
 
 .content a:hover{
   background-image: linear-gradient(315deg, #69140e 0%, #d58936 74%);
   padding: 25px 65px;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
-  outline: 3px solid white;
   outline-offset: -7px;
 }
-/* end- explore button */
-
-
-/* start- company slogan */
-.content h3{
-  font-family: 'Splash', cursive;
-  letter-spacing: 3px;
-  font-size: 35px;
-  color: white;
-  text-shadow: orange 3px 3px 3px;
-  margin-top: 35px;
-  animation: slogan 10s;
-}
-@keyframes slogan {
-  0% {
-      transform: rotateX(0deg) scale(0);
-  }
-}
 /* end-company slogan */
+/* *************************************** */
+
 
 
 /* END- CENTER CAPTION LANDING-PAGE AND REQUEST SERVICE HERE */
-
 
 #promo{
   margin-top: 10vh;
   display: flex;
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   justify-content: center;
   align-items: center;
   background-image: url(/logo/solar-home.jpg);
@@ -172,18 +165,13 @@ body{
   background-position: center center;
 }
 
-.men-at-work {
-  overflow: hidden;
-  margin-top: 100px; /* Add some space to test scrolling */
-}
-
 .promo-banner {
   overflow-y: hidden;
   width: 50vw;
   height: 40vh; 
   opacity: 0;
   transform: translateX(-100%); /* Start position: off the screen to the right */
-  transition: transform 3s ease, opacity 1s ease;
+  transition: transform 2s ease, opacity 1s ease;
 }
 
 .promo-banner.visible {
@@ -198,66 +186,55 @@ body{
 
 /* START- ABOUT SECTION BEGINS HERE */
 #about{
-  padding-top: 12vh;
+  padding-top: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 190vh;
+  height: 225vh;
   width: 100vw;
   /* background-color: #69140e; */
-}
-
-.our-company h1{
-  font-family: fantasy;
-  font-size: 35px;
-  color: #69140e;
-  }
-.line{
-  margin-top: 10px;
-  width: 100px;
-  height: 4px;
-  background-color: #69140e;
 }
 
 
 /*start- core-vision-mission div */
 .core-vision-mission{
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-  height: 32vh;
+  height: 55vh;
+  color: white;
+  background-color: #69140e;
 }
 /*end- core-vision-mission div */
 
 .believe{
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  width:31% ;
+  height: 40vh;
+  width:30vw ;
   text-align:center;
   justify-content: center;
+  background-color: #d58936;
 }
 
 .believe h1{
   font-size: 23px;
-  color: #69140e;
 }
 
 .believe p{
   font-size: 18px;
-  color: #69140e;
 }
 
 #about .core-vision-mission > .believe{
-  scale: 0.8; opacity: 1;
+  scale: 1; opacity: 1;
   animation: fade-in linear;
-  animation-timeline: view();
+  animation-timeline: view(10%);
   animation-range:contain;
 }
 @keyframes fade-in {
-  to {scale: 1; opacity: 1;}
+  to {scale: 0; opacity: 0;}
 }
 
 
@@ -266,7 +243,7 @@ body{
   margin-top: 40px;
   position: relative;
     width: 80vw;
-    height: 130vh;
+    height: 135vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,13 +252,13 @@ body{
 }
 
 .about-ppas-container::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-image: url(/pageswitback/pexels-thisisengineering-19895880.jpg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(/pageswitback/pexels-thisisengineering-19895880.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -297,8 +274,8 @@ body{
 
 
 .texts img{
-  width: 280px;
-  height: 280px;
+  width: 270px;
+  height: 270px;
   border-radius: 150px;
   margin-left:1rem;
   shape-outside:circle();
@@ -308,7 +285,7 @@ body{
 
 .texts h1{
   font-family: fantasy;
-  font-size: 25px;
+  font-size: 26px;
   letter-spacing: 1px;
   color: #69140e;
   text-align: center;  
@@ -366,7 +343,7 @@ body{
   margin: 5vh;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
 .project-item {
@@ -374,7 +351,7 @@ body{
   height:45vh;
   cursor: pointer;
   border-radius: 6px;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
   background-color: #d58936;
 }
 
@@ -383,7 +360,7 @@ body{
 }
 
 .lightbox {
-  margin-top: 6vh;
+  /* margin-top: 6vh; */
   display: none; /* Hidden by default */
   position: fixed;
   z-index: 1000;
@@ -391,23 +368,23 @@ body{
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: lightgrey;
   justify-content: center;
   align-items: center;
 }
 
 .lightbox-content {
-  max-width: 80%;
-  max-height: 75%;
-  background-color: red;
+  max-width: 100%;
+  max-height: 85%;
+  /* background-color: red; */
 }
 
 .close {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: red;
-  font-size: 40px;
+  color: #69140e;
+  font-size: 50px;
   cursor: pointer;
 }
 /* *********************************************************************** */
@@ -435,8 +412,40 @@ body{
     opacity: 0.3;
 }
 
+.xyz{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 35vw;
+  height: 80vh;
+  gap: 15px;
+  padding-left: 20px;
+ 
+}
+
+.xyz h1{
+  font-family: fantasy;
+  font-size: 28px;
+  color: #69140e;
+}
+
+.xyz a{
+  text-decoration: none;
+  color: #69140e;
+}
+
+.xyz p{
+  font-size: 20px;
+  color: #69140e;
+}
+
+.xyz a :hover{
+  color: red;
+}
+
 .men-at-work {
-  /* position: absolute; */
   overflow: hidden;
   width: 35vw;
   height: 80vh;
@@ -459,43 +468,48 @@ body{
   opacity: 1;
 }
 
-.xyz{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  width: 35vw;
-  height: 80vh;
-  gap: 15px;
-  /* background-color: #f3ba7e; */
-  padding-left: 20px;
- 
-}
-
-.xyz h1{
-  font-family: fantasy;
-  font-size: 28px;
-  color: #69140e;
-}
-
-.xyz a{
-  text-decoration: none;
-  color: #69140e;
-  font-size: 20px;
-}
-
-.btn-quote{
-  display: flex;
+/* Get quote button  */
+.fancy-button {
+  position: relative;
   width: 150px;
-  height: 60px;
-  border-radius: 3px;
-  justify-content: center;
-  align-items: center;
-  outline: #69140e solid 2px;
+  height: 50px;
+
+  /* padding: 10px 10px; */
+  font-size: 16px;
+  color: #fff;
+  background-color: #69140e;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: color 0.4s ease;
 }
 
-.btn-quote:hover{
+.fancy-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background-color: red;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.fancy-button:hover::before {
+  left: 0; /* Slide effect on hover */
+}
+
+.fancy-button:hover {
+  color: #ffffff;
+  border-color: #69140e; /* Border color change */
+}
+
+.fancy-button span {
+  position: relative;
+  z-index: 1; /* Keep text on top */
 }
 
 /* ************************************************************************ */
