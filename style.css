@@ -20,8 +20,7 @@ body{
   position: fixed;
   height: 13vh;
   width: 100vw;
-  /* padding-right: 70px; */
-   background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
+  background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
 }
 
 .navbar-brand img{
@@ -36,11 +35,6 @@ body{
   margin-left: auto;
 }
 
-/* Change the font color to white */
-.navbar .navbar-nav .nav-link {
-  color: white !important;
-}
-
 /* Add spacing between menu items */
 .navbar-nav .nav-item {
   margin-left: .5rem;
@@ -50,6 +44,48 @@ body{
 .navbar-toggler-icon {
   background-color: white; 
 }
+
+.navbar-nav .nav-link {
+  position: relative; /* Required for the underline effect */
+  color: white; /* Initial text color */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+/* Hover text color change */
+.navbar-nav .nav-link:hover {
+  color: #d58936; /* Color on hover */
+}
+
+/* Underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #d58936; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Expanding underline on hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Keep underline on active page */
+.navbar-nav .nav-link.active::after {
+  color: white;
+  width: 100%;
+  left: 0;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 /* END: STYLING FOR THE NAVBAR ENDS HERE */
 
@@ -91,8 +127,8 @@ body{
     text-align: center;
     word-spacing: 40px;
     color: white;
-    text-shadow: orange 5px 5px 5px;
-    animation: ppas 1s;
+    text-shadow: #d58936 5px 5px 5px;
+    animation: ppas 2s;
 }
 @keyframes ppas {
   0% {
@@ -107,9 +143,9 @@ body{
   letter-spacing: 3px;
   font-size: 35px;
   color: white;
-  text-shadow: orange 3px 3px 3px;
+  text-shadow: #d58936 3px 3px 3px;
   margin-top: 35px;
-  animation: slogan 1.5s;
+  animation: slogan 3s;
 }
 @keyframes slogan {
   0% {
@@ -117,41 +153,62 @@ body{
   }
 }
 
-.content a{
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 20px 60px;
-  border-radius: 25px;
-  background: transparent;
-  margin-top: 30px;
-  outline: 3px solid white;
-  animation: btn 2s;
-}
-@keyframes btn{
-  0%{
-    transform: rotateY(180deg) scale(0)
-  }
-  25%{
-    transform: rotateX(180deg) scale(0)
-  }
-}
-
-.content a:hover{
-  background-image: linear-gradient(315deg, #69140e 0%, #d58936 74%);
-  padding: 25px 65px;
-  border-radius: 20px;
-  color: white;
-  outline-offset: -7px;
-}
 /* end-company slogan */
 /* *************************************** */
+/* Get quote button  */
+.request-btn {
+  margin-top: 50px;
+  position: relative;
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #69140e;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: color 0.4s ease;
+  animation: request 3.5s;
+}
+@keyframes request {
+  0% {
+      transform: rotateX(180deg) scale(0);
+  }
+
+}
+
+
+.request-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #d58936;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.request-btn:hover::before {
+  left: 0; /* Slide effect on hover */
+}
+
+.request-btn:hover {
+  color: #ffffff;
+}
+
+.request-btn span {
+  position: relative;
+  z-index: 1; /* Keep text on top */
+}
 
 
 
 /* END- CENTER CAPTION LANDING-PAGE AND REQUEST SERVICE HERE */
-
+/* ************************************************************************ */
 #promo{
   margin-top: 10vh;
   display: flex;
@@ -183,6 +240,7 @@ body{
   width: 100%;
   height: 100%;
 }
+/* ****************************************************************** */
 
 /* START- ABOUT SECTION BEGINS HERE */
 #about{
@@ -242,8 +300,8 @@ body{
 .about-ppas-container{
   margin-top: 40px;
   position: relative;
-    width: 80vw;
-    height: 135vh;
+    width: 100vw;
+    height: 145vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,24 +316,24 @@ body{
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: url(/pageswitback/pexels-thisisengineering-19895880.jpg);
+    background-image: url(./pageswitback/helmet.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     opacity: 0.3;
 }
 
-
 .texts{
-  height: 100%;
-  width: 80%;
+  height: 120vh;
+  width: 60vw;
+  /* background-color: yellow; */
 }
 
 
 .texts img{
-  width: 270px;
-  height: 270px;
+  width: 260px;
+  height: 260px;
   border-radius: 150px;
   margin-left:1rem;
   shape-outside:circle();
@@ -285,7 +343,7 @@ body{
 
 .texts h1{
   font-family: fantasy;
-  font-size: 26px;
+  font-size: 30px;
   letter-spacing: 1px;
   color: #69140e;
   text-align: center;  
@@ -312,7 +370,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 117vh;
+  height: 120vh;
   text-align: center;
 }
 
@@ -321,7 +379,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 20vh;
+  height: 25vh;
   justify-content: center;
   align-items: center;
   /* background-color: red; */
@@ -329,7 +387,7 @@ body{
 
 .project-head h1{
   font-family: fantasy;
-  font-size: 30px;
+  font-size: 32px;
   color: #69140e;
   }
 
@@ -360,22 +418,22 @@ body{
 }
 
 .lightbox {
-  /* margin-top: 6vh; */
+  margin-top: 6vh;
   display: none; /* Hidden by default */
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: lightgrey;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d58936;
   justify-content: center;
   align-items: center;
 }
 
 .lightbox-content {
   max-width: 100%;
-  max-height: 85%;
+  max-height: 80%;
   /* background-color: red; */
 }
 
@@ -385,6 +443,7 @@ body{
   right: 30px;
   color: #69140e;
   font-size: 50px;
+  font-weight: bolder;
   cursor: pointer;
 }
 /* *********************************************************************** */
@@ -404,12 +463,7 @@ body{
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url(/pages/ladywriting-removebg-preview.png);
-    background-repeat: repeat;
-    background-size: contain;
-    background-position: center center;
-    background-attachment: fixed;
-    opacity: 0.3;
+  
 }
 
 .xyz{
@@ -474,7 +528,6 @@ body{
   width: 150px;
   height: 50px;
 
-  /* padding: 10px 10px; */
   font-size: 16px;
   color: #fff;
   background-color: #69140e;
@@ -523,7 +576,7 @@ footer{
   justify-content: right;
   align-items: center;
   font-size: 16px;
-  background: linear-gradient(100deg, #69140e 0%, #d58936 74%);
+  background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
 }
 
 .foot{
@@ -558,6 +611,3 @@ footer{
     transform:rotateY(45deg);
 }
 } 
-  
-
-

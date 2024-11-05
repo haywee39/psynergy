@@ -30,13 +30,11 @@ body{
 
 
 /* START:STYLING  FOR THE NAVBAR STARTS FROM HERE */
-
 .navbar{
   position: fixed;
-  height: 14vh;
+  height: 13vh;
   width: 100vw;
-  padding-right: 70px;
-   background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
+  background: linear-gradient(100deg, #d58936  0%, #69140e 74%);
 }
 
 .navbar-brand img{
@@ -51,11 +49,6 @@ body{
   margin-left: auto;
 }
 
-/* Change the font color to white */
-.navbar .navbar-nav .nav-link {
-  color: white !important;
-}
-
 /* Add spacing between menu items */
 .navbar-nav .nav-item {
   margin-left: .5rem;
@@ -65,6 +58,48 @@ body{
 .navbar-toggler-icon {
   background-color: white; 
 }
+
+.navbar-nav .nav-link {
+  position: relative; /* Required for the underline effect */
+  color: white; /* Initial text color */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+/* Hover text color change */
+.navbar-nav .nav-link:hover {
+  color: #d58936; /* Color on hover */
+}
+
+/* Underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #d58936; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Expanding underline on hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Keep underline on active page */
+.navbar-nav .nav-link.active::after {
+  color: white;
+  width: 100%;
+  left: 0;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 /* END: STYLING FOR THE NAVBAR ENDS HERE */
 
@@ -173,11 +208,11 @@ body{
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: url(/pageswitback/pexels-thisisengineering-19895880.jpg);
+    background-image: url(./pageswitback/helmet.jpg);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
-      background-attachment: fixed;
+      /* background-attachment: fixed; */
       opacity: 0.3;
   }
   
@@ -190,8 +225,8 @@ body{
   
   
   .texts img{
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
     border-radius: 150px;
     margin-left:1rem;
     shape-outside:circle();
